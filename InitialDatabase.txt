@@ -1,0 +1,10 @@
+Thomas Crosby 555248593 111111 Checking 5000.00 Open
+Trevor Vega 637764438 222222 Checking 500.00 Open
+Freda McGuire 499880485 333333 Checking 2350.00 Closed
+Larry Hunt 595492125 444444 Savings 0.00 Closed
+Mara Erickson 444081128 555555 Savings 150.75 Open
+Michael Ford 385604386 666666 Savings 820.40 Open
+Arthur Wiley 673059481 777777 Savings 5000.00 Open
+Arthur Wiley 673059481 888888 CD 7500.00 5 10 2021 Open
+Elvira Cohen 618927489 999999 CD 4600.00 4 3 2022 Open
+David Wright 382723318 123456 CD 3800.00 11 26 2020 Open

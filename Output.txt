@@ -1,0 +1,629 @@
+--------------------
+Initial database:
+--------------------
+
+
+Last Name         First Name        SSN               Account Num.      Account Type      Account Status       Balance            Maturity Date     
+
+Crosby               Thomas               555248593         111111            Checking               Open                 $5,000.00
+Vega                 Trevor               637764438         222222            Checking               Open                   $500.00
+McGuire              Freda                499880485         333333            Checking               Closed               $2,350.00
+Hunt                 Larry                595492125         444444            Savings                Closed                   $0.00
+Erickson             Mara                 444081128         555555            Savings                Open                   $150.75
+Ford                 Michael              385604386         666666            Savings                Open                   $820.40
+Wiley                Arthur               673059481         777777            Savings                Open                 $5,000.00
+Wiley             Arthur            673059481         888888            CD                Open                 $7,500.00           7/10/2021
+Cohen             Elvira            618927489         999999            CD                Open                 $4,600.00           6/3/2022
+Wright            David             382723318         123456            CD                Open                 $3,800.00           1/26/2021
+
+Total Amount in Checking Accounts: $7,850.00
+Total Amount in Savings Accounts: $5,971.15
+Total Amount in CD Accounts: $15,900.00
+Total Amount in All Accounts: $29,721.15
+
+--------------------Transaction History--------------------
+Invalid selection: z
+
+Invalid selection: v
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Check balance
+Transaction Result: Get Balance success
+Transaction Amount: $0.00
+Pre-Transaction Balance: $5,000.00
+Post-Transaction Balance: $5,000.00
+Account Number: 111111
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Check balance
+Transaction Result: Get balance error
+Reason for Failure: Account not found
+Transaction Amount: $0.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 654321
+Account Type: null
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Deposit
+Transaction Result: Deposit success
+Transaction Amount: $450.00
+Pre-Transaction Balance: $500.00
+Post-Transaction Balance: $950.00
+Account Number: 222222
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Deposit
+Transaction Result: Deposit error
+Reason for Failure: Invalid deposit amount
+Transaction Amount: -$75.75
+Pre-Transaction Balance: $150.75
+Post-Transaction Balance: $150.75
+Account Number: 555555
+Account Type: Savings
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Deposit
+Transaction Result: Deposit error
+Reason for Failure: Account not found
+Transaction Amount: $100.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 987654
+Account Type: null
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Withdrawal
+Transaction Result: Withdrawal error
+Reason for Failure: New term of maturity for CD accounts cannot be zero months.
+Transaction Amount: $600.00
+Pre-Transaction Balance: $4,600.00
+Post-Transaction Balance: $4,600.00
+Account Number: 999999
+Account Type: CD
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Withdrawal
+Transaction Result: Withdrawal success; Account Within Maturity Date: 6/10/2023
+Transaction Amount: $600.00
+Pre-Transaction Balance: $4,600.00
+Post-Transaction Balance: $4,000.00
+Account Number: 999999
+Account Type: CD
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Withdrawal
+Transaction Result: Withdrawal error
+Reason for Failure: CD account has not yet reached maturity date (6/10/2023)
+Transaction Amount: $100.00
+Pre-Transaction Balance: $4,000.00
+Post-Transaction Balance: $4,000.00
+Account Number: 999999
+Account Type: CD
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Withdrawal
+Transaction Result: Withdrawal; error
+Reason for Failure: Invalid deposit amount
+Transaction Amount: -$5,000.00
+Pre-Transaction Balance: $7,500.00
+Post-Transaction Balance: $7,500.00
+Account Number: 888888
+Account Type: CD
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Withdrawal
+Transaction Result: Withdrawal error
+Reason for Failure: Insufficient funds
+Transaction Amount: $500.00
+Pre-Transaction Balance: $150.75
+Post-Transaction Balance: $150.75
+Account Number: 555555
+Account Type: Savings
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Withdrawal
+Transaction Result: Withdrawal error
+Reason for Failure: Account not found
+Transaction Amount: $950.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 876543
+Account Type: null
+
+
+Transaction Date: 12/10/2022
+Transaction Type: New Account
+Transaction Result: Open new account error
+Reason for Failure: Account already in use
+Transaction Amount: $8,000.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 999999
+Account Type: null
+
+
+Transaction Date: 12/10/2022
+Transaction Type: New Account
+Transaction Result: Open new account success
+Transaction Amount: $0.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 223344
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: New Account
+Transaction Result: Open new account success
+Transaction Amount: $250.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $250.00
+Account Number: 445566
+Account Type: Savings
+
+
+Transaction Date: 12/10/2022
+Transaction Type: New Account
+Transaction Result: Open new account success
+Transaction Amount: $1,500.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $1,500.00
+Account Number: 667788
+Account Type: CD
+
+
+Transaction Date: 12/10/2022
+Transaction Type: New Account
+Transaction Result: Open new account success
+Transaction Amount: $0.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 888999
+Account Type: Savings
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Deposit
+Transaction Result: Deposit success
+Transaction Amount: $1,000.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $1,000.00
+Account Number: 888999
+Account Type: Savings
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Withdrawal
+Transaction Result: Withdrawal error
+Reason for Failure: CD account has not yet reached maturity date (6/10/2023)
+Transaction Amount: $500.00
+Pre-Transaction Balance: $1,500.00
+Post-Transaction Balance: $1,500.00
+Account Number: 667788
+Account Type: CD
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Deposit
+Transaction Result: Deposit error
+Reason for Failure: Account maturity not reached (6/10/2023)
+Transaction Amount: $450.00
+Pre-Transaction Balance: $1,500.00
+Post-Transaction Balance: $1,500.00
+Account Number: 667788
+Account Type: CD
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Withdrawal
+Transaction Result: Withdrawal success
+Transaction Amount: $200.00
+Pre-Transaction Balance: $1,000.00
+Post-Transaction Balance: $800.00
+Account Number: 888999
+Account Type: Savings
+
+
+
+Transaction Type: Account info
+Transaction Result: Find account info success
+Reason: Account(s) found
+Date of Transaction: 12/10/2022
+Social Security Number: 444081128
+
+
+	Account #555555
+	Account Type: Savings
+	Account Balance: $150.75
+	Account Status: Open
+
+
+Transaction Type: Account info
+Transaction Result: Find account info success
+Reason: Account(s) found
+Date of Transaction: 12/10/2022
+Social Security Number: 699038559
+
+
+	Account #223344
+	Account Type: Checking
+	Account Balance: $0.00
+	Account Status: Open
+
+
+Transaction Type: Account info
+Transaction Result: Find account info success
+Reason: Account(s) found
+Date of Transaction: 12/10/2022
+Social Security Number: 555810392
+
+
+	Account #667788
+	Account Type: CD
+	Account Balance: $1500.00
+	Account Status: Open
+	Maturity Date: 6/10/2023
+
+
+	Account #888999
+	Account Type: Savings
+	Account Balance: $800.00
+	Account Status: Open
+
+
+Transaction Type: Account info
+Transaction Result: Find account info error
+Reason: No accounts found for the social security number
+Date of Transaction: 12/10/2022
+Social Security Number: 333224444
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Delete account
+Transaction Result: Delete account success
+Transaction Amount: $0.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 223344
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Delete account
+Transaction Result: Delete account success
+Transaction Amount: $0.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 444444
+Account Type: Savings
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Delete account
+Transaction Result: Delete account error
+Reason for Failure: Account has an existing balance
+Transaction Amount: $0.00
+Pre-Transaction Balance: $800.00
+Post-Transaction Balance: $800.00
+Account Number: 888999
+Account Type: Savings
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Withdrawal
+Transaction Result: Withdrawal success
+Transaction Amount: $800.00
+Pre-Transaction Balance: $800.00
+Post-Transaction Balance: $0.00
+Account Number: 888999
+Account Type: Savings
+
+
+
+Transaction Type: Account info and history
+Transaction Result: Find account info and history success
+Reason: Accounts found
+Date of Transaction: 12/10/2022
+Social Security Number: 555810392
+
+
+-----Account and History Information Below-----
+
+Transaction: Open new account success
+Reason: 
+Pre-Transaction Balance: $0.0
+Post-Transaction Balance: $1500.0
+Account number: 667788
+Account Type: CD
+
+-----------------------------
+Transaction: Withdrawal error
+Reason: CD account has not yet reached maturity date (6/10/2023)
+Pre-Transaction Balance: $1500.0
+Post-Transaction Balance: $1500.0
+Account number: 667788
+Account Type: CD
+Maturity Date: 5/10/2023
+
+-----------------------------
+Transaction: Deposit error
+Reason: Account maturity not reached (6/10/2023)
+Pre-Transaction Balance: $1500.0
+Post-Transaction Balance: $1500.0
+Account number: 667788
+Account Type: CD
+Maturity Date: 5/10/2023
+
+-----------------------------
+Transaction: Open new account success
+Reason: 
+Pre-Transaction Balance: $0.0
+Post-Transaction Balance: $0.0
+Account number: 888999
+Account Type: Savings
+
+-----------------------------
+Transaction: Deposit success
+Reason: Default
+Pre-Transaction Balance: $0.0
+Post-Transaction Balance: $1000.0
+Account number: 888999
+Account Type: Savings
+
+-----------------------------
+Transaction: Withdrawal success
+Reason: Default
+Pre-Transaction Balance: $1000.0
+Post-Transaction Balance: $800.0
+Account number: 888999
+Account Type: Savings
+
+-----------------------------
+Transaction: Delete account error
+Reason: Account has an existing balance
+Pre-Transaction Balance: $800.0
+Post-Transaction Balance: $800.0
+Account number: 888999
+Account Type: Savings
+Maturity Date: 11/10/2022
+
+-----------------------------
+Transaction: Withdrawal success
+Reason: Default
+Pre-Transaction Balance: $800.0
+Post-Transaction Balance: $0.0
+Account number: 888999
+Account Type: Savings
+
+-----------------------------
+
+Transaction Date: 12/10/2022
+Transaction Type: Delete account
+Transaction Result: Delete account success
+Transaction Amount: $0.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 888999
+Account Type: Savings
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Delete account
+Transaction Result: Delete account error
+Reason for Failure: Account not found
+Transaction Amount: $0.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 321321
+Account Type: null
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Close account
+Transaction Result: Close account error
+Reason for Failure: Account already closed
+Transaction Amount: $0.00
+Pre-Transaction Balance: $2,350.00
+Post-Transaction Balance: $2,350.00
+Account Number: 333333
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Close account
+Transaction Result: Close account error
+Reason for Failure: Account not found
+Transaction Amount: $0.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 444444
+Account Type: null
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Deposit
+Transaction Result: Deposit success
+Transaction Amount: $500.00
+Pre-Transaction Balance: $2,350.00
+Post-Transaction Balance: $2,850.00
+Account Number: 333333
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Withdrawal
+Transaction Result: Withdrawal error
+Reason for Failure: Account not found
+Transaction Amount: $200.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 444444
+Account Type: null
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Reopen account
+Transaction Result: Reopen account success
+Transaction Amount: $0.00
+Pre-Transaction Balance: $5,000.00
+Post-Transaction Balance: $5,000.00
+Account Number: 777777
+Account Type: Savings
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Reopen account
+Transaction Result: Reopen account success
+Transaction Amount: $0.00
+Pre-Transaction Balance: $2,850.00
+Post-Transaction Balance: $2,850.00
+Account Number: 333333
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Reopen account
+Transaction Result: Reopen account error
+Reason for Failure: Account not found
+Transaction Amount: $0.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 444444
+Account Type: null
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Clear Check
+Transaction Result: Clear check error
+Reason for Failure: Account not found
+Transaction Amount: $1,000.00
+Pre-Transaction Balance: $0.00
+Post-Transaction Balance: $0.00
+Account Number: 535242
+Account Type: null
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Clear Check
+Transaction Result: Clear check error
+Reason for Failure: Cannot clear check on non-Checking account
+Transaction Amount: $500.00
+Pre-Transaction Balance: $4,000.00
+Post-Transaction Balance: $4,000.00
+Account Number: 999999
+Account Type: CD
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Clear Check
+Transaction Result: Clear check error
+Reason for Failure: Check date (1/20/2022) is older than 6 months
+Transaction Amount: $50.00
+Pre-Transaction Balance: $2,850.00
+Post-Transaction Balance: $2,850.00
+Account Number: 333333
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Clear Check
+Transaction Result: Clear check success
+Transaction Amount: $50.00
+Pre-Transaction Balance: $2,850.00
+Post-Transaction Balance: $2,800.00
+Account Number: 333333
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Clear Check
+Transaction Result: Clear check success
+Transaction Amount: $1,000.00
+Pre-Transaction Balance: $5,000.00
+Post-Transaction Balance: $4,000.00
+Account Number: 111111
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Clear Check
+Transaction Result: Clear check error
+Reason for Failure: Check is post-dated (12/14/2022) and cannot be cleared
+Transaction Amount: $100.00
+Pre-Transaction Balance: $4,000.00
+Post-Transaction Balance: $4,000.00
+Account Number: 111111
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Clear Check
+Transaction Result: Clear check error
+Reason for Failure: Insufficient funds to clear check, $2.50 penalty applied
+Transaction Amount: $2,000.00
+Pre-Transaction Balance: $950.00
+Post-Transaction Balance: $947.50
+Account Number: 222222
+Account Type: Checking
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Close account
+Transaction Result: Close account success
+Transaction Amount: $0.00
+Pre-Transaction Balance: $3,800.00
+Post-Transaction Balance: $3,800.00
+Account Number: 123456
+Account Type: CD
+
+
+Transaction Date: 12/10/2022
+Transaction Type: Close account
+Transaction Result: Close account error
+Reason for Failure: Account already closed
+Transaction Amount: $0.00
+Pre-Transaction Balance: $5,000.00
+Post-Transaction Balance: $5,000.00
+Account Number: 777777
+Account Type: Savings
+
+-------------------------------------------------------------------
+
+
+--------------------
+Final database:
+--------------------
+
+
+Last Name         First Name        SSN               Account Num.      Account Type      Account Status       Balance            Maturity Date     
+
+Crosby               Thomas               555248593         111111            Checking               Open                 $4,000.00
+Vega                 Trevor               637764438         222222            Checking               Open                   $947.50
+McGuire              Freda                499880485         333333            Checking               Closed               $2,800.00
+Toro              Matthew           555810392         667788            CD                Open                 $1,500.00           6/10/2023
+Erickson             Mara                 444081128         555555            Savings                Open                   $150.75
+Ford                 Michael              385604386         666666            Savings                Open                   $820.40
+Wiley                Arthur               673059481         777777            Savings                Open                 $5,000.00
+Wiley             Arthur            673059481         888888            CD                Open                 $7,500.00           7/10/2021
+Cohen             Elvira            618927489         999999            CD                Open                 $4,000.00           6/10/2023
+Wright            David             382723318         123456            CD                Open                 $3,800.00           1/26/2021
+Diaz                 Mirian               512272842         445566            Savings                Open                   $250.00
+
+Total Amount in Checking Accounts: $7,747.50
+Total Amount in Savings Accounts: $6,221.15
+Total Amount in CD Accounts: $16,800.00
+Total Amount in All Accounts: $30,768.65
